@@ -37,34 +37,33 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <table class="list-jobs">
-        <th:block th:each="job : ${jobs}">
-            <tr>
-                <td>ID</td>
-                <td th:text="${job.id}">Job ID</td>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td th:text="${job.name}">Job Name</td>
-            </tr>
-            <tr>
-                <td>Employer</td>
-                <td th:text="${job.employer}">Job Employer</td>
-            </tr>
-            <tr>
-                <td>Position Type</td>
-                <td th:text="${job.positionType}">Job Position Type</td>
-            </tr>
-            <tr>
-                <td>Location</td>
-                <td th:text="${job.location}">Job Location</td>
-            </tr>
-            <tr>
-                <td>Skill</td>
-                <td th:text="${job.coreCompetency}">Job Core Competency</td>
-            </tr>
-        </th:block>
-
+    <table class="job-listing" th:each="job : ${jobs}">
+        <tbody>
+        <tr>
+            <td>ID</td>
+            <td th:text="${job.id}">Job ID</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td th:text="${job.name}">Job Name</td>
+        </tr>
+        <tr>
+            <td>Employer</td>
+            <td th:text="${job.employer}">Job Employer</td>
+        </tr>
+        <tr>
+            <td>Position Type</td>
+            <td th:text="${job.positionType}">Job Position Type</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td th:text="${job.location}">Job Location</td>
+        </tr>
+        <tr>
+            <td>Skill</td>
+            <td th:text="${job.coreCompetency}">Job Core Competency</td>
+        </tr>
+        </tbody>
     </table>
 
 </div>
